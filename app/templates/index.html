@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <h2> Your previous orders </h2>
+    {% for order in prevOrders %}
+    <hr>
+    <p> Pepperoni: {{order.pepperoni}}</p>
+    <p> Mushrooms: {{order.mushrooms}} </p>
+    <p> Green Peppers: {{order.peppers}}</p>
+    <p> Sauce: {{order.sauce}}</p>
+    <p> Crust: {{order.crust}} </p>
+    <p> Total amount: ${{order.order_total}}</p>
+    <p> Order time: {{order.ordertime}}</p>
+    <p><p>
+    {% endfor %}
+
+{% endblock %}

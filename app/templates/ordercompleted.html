@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1> Your last order: </h1>
+    {% for key, value in pizzaorder.items() %}
+     <p> {{key}}</p>
+     <p> {{value}} </p>
+    {% endfor %}
+
+    <h1>Hi, {{ current_user.username}}! You have the following orders:</h1>
+    {% for order in orders %}
+    <p> {{order}}<p>
+    {% endfor %}
+
+
+{% endblock %}
