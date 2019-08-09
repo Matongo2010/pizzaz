@@ -1,5 +1,4 @@
-from app import app
-from app import db
+from app import app,db
 from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Order
 from app.forms import LoginForm, RegistrationForm
@@ -10,6 +9,7 @@ from datetime import datetime
 import sys
 
 @app.route('/')
+
 @app.route('/index')
 @login_required
 def index():
